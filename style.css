@@ -1,0 +1,88 @@
+.container {
+    background: blue;
+    height: 600px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+}
+
+.parent {
+    background: #000;
+    color: white;
+    margin-top: 30px;
+    padding: 20px;
+
+    height: 300px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    animation: keep-watching 3s infinite;
+
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.ball {
+    background: radial-gradient(white, red);
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    top: 50px;
+    left: 50px;
+    animation: ball 2s infinite ease-in-out;
+
+}
+
+@keyframes ball {
+    0% {
+        top: 20px;
+        left: 20px;
+        border-radius: 50%;
+    }
+
+    25% {
+        top: 40px;
+        left: 40vw;
+        border-radius: 50% 0 50% 50%;
+    }
+
+    50% {
+        top: 40vh;
+        left: 50vw;
+        border-radius: 50% 50% 0 50%;
+    }
+
+    75% {
+
+        top: 60vh;
+        left: 60px;
+        border-radius: 50% 50% 50 0%;
+    }
+
+    100% {
+        background: radial-gradient(white, red);
+        left: 0;
+        top: 0;
+        border-radius: 50%;
+    }
+}
+
+@keyframes keep-watching {
+    0% {
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
